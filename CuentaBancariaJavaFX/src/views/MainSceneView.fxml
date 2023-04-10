@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainSceneController">
+   <children>
+      <TabPane layoutY="29.0" prefHeight="489.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Gestion de Cuenta">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" layoutY="6.0" orientation="VERTICAL" prefHeight="426.0" prefWidth="600.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="115.0" prefWidth="456.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="6.0" text="Creacion de Cuenta:" />
+                                    <Separator layoutY="25.0" prefHeight="0.0" prefWidth="600.0" />
+                                    <Label layoutX="16.0" layoutY="37.0" text="Numero de Cuenta:" />
+                                    <TextArea fx:id="txtNumeroCuenta" layoutX="131.0" layoutY="33.0" prefHeight="25.0" prefWidth="429.0" />
+                                    <TextArea fx:id="txtSaldoInicial" layoutX="131.0" layoutY="67.0" prefHeight="24.0" prefWidth="429.0" />
+                                    <Label layoutX="16.0" layoutY="71.0" text="Saldo Inicial:" />
+                                    <Label layoutX="262.0" layoutY="142.0" text="Tipo de Cuenta:" />
+                                    <ComboBox fx:id="comboBoxTipoCuenta" layoutX="412.0" layoutY="138.0" prefWidth="150.0" />
+                                    <Button fx:id="btnCrearCuenta" layoutX="477.0" layoutY="183.0" mnemonicParsing="false" onAction="#agregarCuenta" text="Crear Cuenta" />
+                                    <Button fx:id="btnConsultar" layoutX="16.0" layoutY="183.0" mnemonicParsing="false" onAction="#consultarCuenta" text="Consultar Cuenta" />
+                                    <Label layoutX="16.0" layoutY="109.0" text="Tasa Anual:" />
+                                    <TextArea fx:id="txtTasaAnual" layoutX="131.0" layoutY="105.0" prefHeight="24.0" prefWidth="429.0" />
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="226.0" prefWidth="598.0">
+                                 <children>
+                                    <TextField fx:id="textFieldDatosCuenta" layoutX="10.0" layoutY="43.0" prefHeight="149.0" prefWidth="578.0" />
+                                    <Label layoutX="14.0" layoutY="14.0" text="Datos de Cuenta:" />
+                                    <Separator layoutY="33.0" prefHeight="0.0" prefWidth="600.0" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Transacciones">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="3.0" layoutY="13.0" prefHeight="434.0" prefWidth="594.0">
+                           <children>
+                              <AnchorPane layoutY="-4.0" prefHeight="448.0" prefWidth="600.0">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Retiros y Consignaciones:" />
+                                    <Separator layoutY="44.0" prefHeight="0.0" prefWidth="600.0" />
+                                    <Label layoutX="22.0" layoutY="58.0" text="Valor: " />
+                                    <TextArea fx:id="txtValorTrans" layoutX="82.0" layoutY="55.0" prefHeight="23.0" prefWidth="490.0" />
+                                    <Button fx:id="btnRetirarAhorros" layoutX="16.0" layoutY="138.0" mnemonicParsing="false" onAction="#retirarAhorros" text="Retirar Ahorros" />
+                                    <Button fx:id="btnRetirarCorriente" layoutX="157.0" layoutY="139.0" mnemonicParsing="false" onAction="#retirarCorriente" text="Retirar Corriente" />
+                                    <Button fx:id="btnConsignarCorriente" layoutX="300.0" layoutY="139.0" mnemonicParsing="false" onAction="#consignarCorriente" text="Consignar Corriente" />
+                                    <Button fx:id="btnConsignarAhorros" layoutX="457.0" layoutY="138.0" mnemonicParsing="false" onAction="#consignarAhorros" text="Consignar Ahorros" />
+                                    <TextArea fx:id="txtNumCuenta" layoutX="82.0" layoutY="95.0" prefHeight="23.0" prefWidth="490.0" />
+                                    <Label layoutX="7.0" layoutY="98.0" text="Nro Cuenta:" />
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Label alignment="CENTER" layoutX="108.0" layoutY="6.0" prefHeight="17.0" prefWidth="385.0" text="Aplicación Banco">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
